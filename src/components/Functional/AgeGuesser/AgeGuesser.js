@@ -1,6 +1,5 @@
-// helpful resource for typing w async functions in react
-// https://stackoverflow.com/questions/42217121/how-to-start-search-only-when-user-stops-typing
 import axios from 'axios';
+import './AgeGuesser.css';
 import { useEffect, useState } from 'react';
 
 const AgeGuesser = ({url}) => {
@@ -25,7 +24,7 @@ const AgeGuesser = ({url}) => {
     }, [name, url])
 
     return (
-        <div>
+        <div className="age_guesser_color">
             <h1>Age Guesser</h1>
             <input
                 type='text'
