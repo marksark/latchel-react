@@ -1,3 +1,4 @@
+import './Launches.css';
 import { useState, useEffect } from 'react';
 import ResultCard from './ResultCard/ResultCard';
 import axios from 'axios';
@@ -15,7 +16,7 @@ const Launches = ({url}) => {
     }, [url])
 
     return (
-        <div>
+        <div className="launches age_guesser_padding">
             <h1>Launches</h1>
             {launches.map((each, index) => (
                 // only display first 15 for now
