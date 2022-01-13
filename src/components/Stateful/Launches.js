@@ -3,22 +3,32 @@ import axios from 'axios';
 
 class Launches extends React.Component {
     state = {
-        launches: []
+        launches: [],
+        showingLaunches: false
     }
 
     componentDidMount(){
+        this.getLaunches();
+    }
+
+    getLaunches = () => {
         axios.get("https://api.spacexdata.com/v3/launches")
-            .then(resp => this.setState({launches: resp.data}))
+            .then(resp => this.setState({launches: resp.data, showingLaunches: true}))
             .catch(err => {
                 alert(' something happened while fetching launches!')
             });
     }
 
+    clearLaunches = () => {
+        this.setState({ launches: [], showingLaunches: false });
+    }
+
     render() {
+        const { showingLaunches, launches } = this.state;
         return (
             <div>
                 <h1>Launches</h1>
-                {this.state.launches?.map((launch, index) => (
+                {launches?.map((launch, index) => (
                 // only display first 15 for now
                 (index < 15) && (
                     <div key={`${launch.mission_name}-${launch.flight_number}`}>
@@ -26,6 +36,11 @@ class Launches extends React.Component {
                     </div>
                 )
             ))}
+            {showingLaunches ? <div>
+                <button onClick={this.clearLaunches}>Clear Launches</button>
+            </div> : <div>
+                <button onClick={this.getLaunches}>Fetch Launches</button>
+            </div>}
             </div>
         )
     }
