@@ -1,6 +1,6 @@
-import Launches from './components/SpaceX/Launches';
+import Launches from './components/Functional/SpaceX/Launches';
 import './App.css';
-import AgeGuesser from './components/AgeGuesser/AgeGuesser';
+import AgeGuesser from './components/Functional/AgeGuesser/AgeGuesser';
 
 function App() {
   return (
