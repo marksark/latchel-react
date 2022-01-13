@@ -37,7 +37,7 @@ class AgeGuesser extends React.Component {
     
 
     render() {
-        const {nameOfPerson} = this.state;
+        const { nameOfPerson } = this.state;
         return (
             <div>
                 <h1>Age Guesser</h1>
@@ -50,7 +50,7 @@ class AgeGuesser extends React.Component {
                     // trim input value to remove extra spaces
                     onChange={this.handleNameChange}
                     />
-                {/* React will render anything string or number so && here won't work */}
+                {/* React will render any type string or num so && here won't work */}
                 {this.state.age ? <div>
                     <br/>
                     <div>Result for {nameOfPerson}</div>

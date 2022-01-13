@@ -4,7 +4,7 @@ const ResultCard = ({mission_name, flight_number}) => {
 
     return (
         <div className="imRed">
-            {`${flight_number} - ${mission_name}`}
+            {`${mission_name} - ${flight_number}`}
         </div>
     )
 }
