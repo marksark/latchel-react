@@ -21,10 +21,11 @@ class AgeGuesser extends React.Component {
 
     handleNameChange = (e) => {
         this.inputHandler(e);
+
+        // see hl-property-display.js line 105 for an example of this being used in scheduler app!
         if(this.timeout){
             clearTimeout(this.timeout);
         }
-
 
         this.timeout = setTimeout(() => {
             // note: we use e.target.value instead of this.state.nameOfPerson
@@ -35,7 +36,7 @@ class AgeGuesser extends React.Component {
                     console.log('something went wrong!');
                     this.setState({ age: 0 });
                 })
-          }, 1000);
+        }, 1000);
     }
     
 
