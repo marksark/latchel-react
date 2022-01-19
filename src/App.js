@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import SpaceXLaunches from "./components/SpaceXLaunches";
+import AgeGuesserClass from "./components/AgeGuesserClass";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div>
+                <h1>Agify</h1>
+                <AgeGuesserClass />
+            </div>
+            <br />
+            <div className='flights'>
+                <h1>Flight List</h1>
+                <SpaceXLaunches />
+            </div>
+        </div>
+    );
 }
 
 export default App;
