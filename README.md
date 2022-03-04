@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Create a new component called AgeGuesser
 - Create an input, and every time the input changes make a call to this API `https://api.agify.io/?name={text}` with the text entered
 
-Please reach out to me with any questions or if you get stuck! This is meant to be fun and a hands on way of learning ( it doesn't have to look pretty so don't worry about styling ).
+Please reach out to us with any questions or if you get stuck! This is meant to be fun and a hands on exercise.
 ## Available Scripts
 
 In the project directory, you can run:
