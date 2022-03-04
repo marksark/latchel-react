@@ -10,6 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Display the data (name & flight number only `Mission Name - 1`) in a new component called ResultCard
 - Create a new component called AgeGuesser
 - Create an input, and every time the input changes make a call to this API `https://api.agify.io/?name={text}` with the text entered
+- Try to time box yourself to anywhere between 30 minutes - 1 hr for these tasks.
 
 Please reach out to us with any questions or if you get stuck! This is meant to be fun and a hands on exercise.
 ## Available Scripts
